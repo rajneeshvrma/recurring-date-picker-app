@@ -1,0 +1,19 @@
+# .gitpod.yml
+tasks:
+  - name: Install Dependencies and Start App
+    # The 'init' task runs once when the workspace is first created or reset.
+    # It's perfect for installing dependencies.
+    init: npm install # Use 'yarn install' if your project uses Yarn
+
+    # The 'command' task runs every time the workspace starts (after 'init' if applicable).
+    # This is where you start your development server.
+    command: npm start # Use 'yarn start' if your project uses Yarn
+
+# Defines how ports exposed by your application should behave.
+ports:
+  - port: 3000       # Your React app typically runs on port 3000
+    onOpen: open-browser # Automatically open a new browser tab for the app
+    visibility: public   # Makes the port accessible to anyone with the URL (good for demo)
+
+# Optionally, specify the IDE you prefer (VS Code is default for Gitpod)
+# ide: vscode
