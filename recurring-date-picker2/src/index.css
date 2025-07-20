@@ -1,0 +1,286 @@
+/* src/index.css */
+
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* --- Basic Resets & Global Styles --- */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Using Poppins for a modern feel */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5; /* A softer background grey */
+  color: #333; /* Darker, more prominent text */
+  line-height: 1.6;
+}
+
+code {
+  font-family: 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
+}
+
+/* --- Main App Container Styling --- */
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to top */
+  padding: 30px 15px; /* More generous padding */
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgb(106, 109, 126, 1), rgba(0, 123, 255, 0.5)); /* Subtle gradient for depth */
+}
+
+.App {
+  width: 100%;
+  max-width: 960px; /* Slightly wider for better layout */
+  background-color:  rgba(0, 123, 255, 0.25);
+  backdrop-filter: blur(10px); /* Softer blur effect */
+  border-radius: 100px; /* More rounded corners */
+  box-shadow: 0px 0px 5rem 10px rgba(0, 123, 255, 0.25); /* More pronounced, softer shadow */
+  padding: 40px 70px 120px 70px; /* More internal padding */
+  box-sizing: border-box; /* Include padding in width */
+  border: none;
+}
+
+/* --- Headings --- */
+h2.mb-4.text-center{
+  font-family: 'Poppins', sans-serif; /* Consistent font for headings */
+  font-size: 2rem; /* Larger font size for emphasis */
+  margin-bottom: 20px; /* Space below headings */
+  color: #ffffff; /* A deep blue-grey for headings */
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Slightly tighter letter spacing */
+  font-weight: 600; /* Bolder headings */
+}
+h2, h5 {
+  font-weight: 600; /* Bolder headings */
+  color: #2c3e50; /* A deep blue-grey for headings */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #007bff; /* Primary brand color underline */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* --- Card Styles (Bootstrap Overrides) --- */
+.card {
+  background-color:transparent;
+  border-radius: 100px; /* More rounded corners */
+  box-shadow: 0px 0px 2rem 30px rgba(255, 255, 255, 0.25);
+  margin-bottom: 30px; /* More space between cards */
+  border: none; /* Remove default border */
+}
+div .card-header {
+  background-color: rgba(0, 149, 255, 0.269); /* Transparent header */
+  backdrop-filter: blur(10px); /* Softer blur effect */
+  border: none; /* Remove default border */
+  color: #fff; /* White text for better contrast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600; /* Bolder header text */
+  font-size: 1.25rem; /* Slightly larger font size */
+  box-shadow: 0 2px 10px rgba(0, 149, 255, 0.269); /* Subtle shadow for header */
+  padding: 15px 25px; /* More padding for header */
+}
+.card-header h5 {
+  margin-bottom: 0;
+  color: rgb(0, 0, 0); /* Ensure heading text is white */
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.card-body {
+  padding: 25px 20px; /* More padding inside card bodies */
+  background-color: rgb(255, 255, 255);
+  color: #000000; /* Darker text for better readability */
+  border-radius: 0 0 10px 10px; /* Match card border radius */
+  border: none;
+}
+div .row{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+/* --- Form Elements (Bootstrap Overrides & Enhancements) --- */
+.form-label {
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 8px; /* Spacing below label */
+}
+
+.form-control,
+.form-select {
+  border-radius: 6px; /* Slightly more rounded inputs */
+  border: 1px solid #ced4da;
+  padding: 0.75rem 1rem; /* More comfortable padding */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+.input-group{
+  margin-bottom: 20px; /* Space between input groups */
+}
+.input-group-text {
+  background-color: #e9ecef; /* Lighter background for text add-ons */
+  border: 1px solid #ced4da;
+  border-radius: 6px 0 0 6px; /* Match input border radius */
+  font-weight: 500;
+  color: #555;
+}
+
+/* Adjustments for inline elements in customization sections */
+.form-select.d-inline-block,
+.form-control.d-inline-block {
+  vertical-align: middle;
+  margin-right: 10px; /* Space between inline elements */
+  margin-bottom: 10px; /* For wrapping on smaller screens */
+}
+
+/* --- Radio/Checkbox Group Styling --- */
+div .form-check{
+  margin-bottom: 10px; /* Space between radio/checkbox groups */
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+div .mt-2{
+  padding-top: 10px;
+}
+.form-check-inline {
+  margin-right: 1.5rem; /* More space between inline radios/checkboxes */
+  
+}
+.form-check-label {
+  cursor: pointer;
+  padding-left: 0.25rem; /* Slight spacing for label */
+}
+.form-check-input {
+  cursor: pointer;
+}
+.form-check-input:hover {
+  border-color: #80bdff; /* Highlight on hover */
+}
+
+/* --- React DatePicker Customizations --- */
+.react-datepicker__input-container input {
+  /* Inherits styles from .form-control */
+}
+
+.react-datepicker__header {
+  background-color: #f8f9fa; /* Light header background */
+  border-bottom: 1px solid #dee2e6;
+  padding-top: 10px;
+}
+
+.react-datepicker__day-name {
+  color: #555;
+  font-weight: 500;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range {
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%; /* Make selected dates round */
+}
+
+.react-datepicker__day:hover {
+  background-color: #e2e6ea; /* Light hover effect */
+  border-radius: 50%;
+}
+
+/* --- Mini Calendar Preview --- */
+.mini-calendar-container {
+  /* Additional container for flexibility if needed */
+}
+
+.mini-calendar-grid .card-body {
+  padding: 10px; /* Tighter padding for calendar cells */
+}
+
+.mini-calendar-grid .d-flex.flex-wrap.text-center.small > div {
+  /* Cells for calendar */
+  flex-basis: 14.28%; /* 7 columns */
+  max-width: 14.28%;
+  height: 35px; /* Fixed height for cells */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #555;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.mini-calendar-grid .d-flex.flex-wrap.text-center.small > div.border {
+  border: none !important; /* Remove individual cell borders */
+}
+
+/* Style for actual highlighted dates in preview */
+.bg-primary.text-white.rounded-circle {
+  background-color: #007bff !important; /* Ensure primary color */
+  color: white !important;
+  border-radius: 50% !important;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3); /* Subtle shadow for highlighted dates */
+}
+
+.text-muted {
+  font-style: italic;
+  color: #6c757d !important;
+}
+
+/* --- Upcoming Dates List --- */
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+  font-size: 0.95rem;
+  color: #495057;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .App {
+    padding: 25px 15px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .card-header h5 {
+    font-size: 1rem;
+  }
+
+  .mini-calendar-grid .d-flex.flex-wrap.text-center.small > div {
+    height: 30px; /* Slightly smaller cells on mobile */
+  }
+}
